@@ -63,6 +63,6 @@ public class DogTest {
         dog1.sleep();
 
         CatTest cat = new CatTest();
-        cat.catsleep();
+        //cat.catsleep();
     }
 }
