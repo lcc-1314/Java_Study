@@ -1,3 +1,4 @@
+import java.time.chrono.IsoChronology;
 
 class Dog{
 String name;
@@ -12,7 +13,16 @@ public    void lookHome(){
     }
 }
 
-
+class LittleDog extends Dog{
+    boolean IsGlass;
+    String name;
+    public void  eat(){
+        this.IsGlass = IsGlass;
+        this.name = name;
+        this.sleep();
+        System.out.println(name+"小狗在吃饭！,今天戴眼镜了："+IsGlass);
+    }
+}
 
 public class DogTest {
     public static void main(String[] args) {
@@ -28,6 +38,16 @@ public class DogTest {
         System.out.println(dog.name+"是"+dog.sex+"狗"+dog.age+"岁"+"体重"+dog.wight+"公斤");
         dog.sleep();
         dog.lookHome();
+
+
+        //创建小狗的对象
+        LittleDog dog1 = new LittleDog();
+        dog1.name = "红红";
+        dog1.age = 2;
+        dog1.wight = 3.0;
+        dog1.IsGlass = true;
+        System.out.println(dog1.name+"今年"+dog1.age+"岁了，很乖！");
+        dog1.eat();
     }
 
 }
